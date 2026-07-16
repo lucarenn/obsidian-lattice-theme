@@ -1,0 +1,158 @@
+/*
+                                            _.._               
+.---.                                   .-'_..._''.                     
+|   |                           .--.  .' .'      '.\     __.....__        
+|   |                           |__| / .'            .-''         '.      
+|   |              .|       .|  .--.. '             /     .-''"'-.  `.  
+|   |    __      .' |_    .' |_ |  || |      |     /     /________\   \ 
+|   | .:--.'.  .'     | .'     ||  || |    -=x=-   |                  | 
+|   |/ |   \ |'--.  .-''--.  .-'|  |. '      |     \    .-------------' 
+|   |`" __ | |   |  |     |  |  |  | \ '.          .\    '-........---. 
+|   | .'.''| |   |  |     |  |  |__|  '. `.......-'/ `.             .'  
+'---'/ /   | |_  |  '.'   |  '.'        `-....... /    `''-...... -'    
+     \ \._,\ '/  |   /    |   /                                        
+      `--'  `"   `'-'     `'-'           -~oO VICIOUS THEME Oo~-
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Installation:
+1. Download this CSS file
+2. Create a snippets folder in your vault-folder/.obsidian directory
+3. Put the CSS file inside the vault-folder/.obsidian/snippets folder
+4. Go to Settings -> Appearance. Scroll down to "CSS snippets" and toggle this copied file to "on"
+5. Install the "Style Settings" community plugin to customize https://github.com/obsidian-community/obsidian-style-settings
+
+This is a preset for the Vicious Theme https://github.com/zaheralmajed/vicious-theme-obsidian/
+
+----------------------------------------------------------------------------------------------------------------------------- */
+
+/* @settings
+
+name: Lattice Vicious
+id: lattice-vicious
+settings:
+	-
+		id: file-line-width
+		title: Document Width
+		description: Set the width of the document
+		type: variable-select
+		default: 820px
+		options:
+			- 720px
+			- 780px
+			- 820px
+			- 880px
+			- 920px
+			- 980px
+			- 1020px
+			- 1080px
+	-
+		id: editor-bg-size
+		title: Grid Tiling
+		description: Background dot grid tiling size in pixels
+		type: variable-number-slider
+		default: 62
+		min: 20
+		max: 80
+		step: 1
+	-
+		id: editor-bg-blend
+		title: Grid Overlay Mode
+		description: Set the overlay mode of the dot grid in the editor background
+		type: variable-select
+		default: overlay
+		options:
+			- overlay
+			- normal
+			- multiply
+			- screen
+			- darken
+			- lighten
+	-
+		id: editor-bg-color
+		description: Set the color of the dot grid background
+		title: Grid Color
+		type: variable-color
+		format: hex
+		opacity: true
+		default: #1923021
+
+*/
+
+
+:root {
+    --editor-bg-blend: overlay; /* Point grid overlay mode */
+    --editor-bg-size: auto;     /* Point grid texture tiling size (auto = 62px) */
+	--file-line-width: 920px;   /* Set the width of the Document */
+}
+
+/* ============================= */
+/* Vicious Theme                 */
+/* ============================= */
+
+/* 
+Adjusting colors for vicious theme
+000 = main text color
+300 = tab and file name color
+400 = inactive tabs text color
+600 = top left icon outline color
+700 = tab and icon bar background color (examples: #0a0909, #242121, #272729)
+800 = main background color (example: #312f2f, #111111, #0f0f0f)
+*/
+
+/* Vicious theme LIGHT */
+body.theme-light {
+    --editor-bg-color: #d6cdc8b4;             /* c0bcbab4 bdb6b7 d6cdc8b4 e7ded9b4 */ 
+    --editor-note-shadow-color: #797673d2;    /* color for shadow around note */
+    --editor-note-border-color: #b8adad9d;    /* color for border around note */
+	--editor-bg-offset: 4px 0px;				/* offset for background image (Point Grid) */
+    --editor-bg-size: 48px; 					/* tiling for background image (Point Grid) */
+
+    --000: #e4dcd5;     /* e4dcd5 ebe4e3 */
+	--100: #c7b9b2;     /* c0b7ad c7b9b2 */
+	--300: #423e3e;
+    --800: #312d2d;
+}
+
+/* Vicious theme DARK */
+body.theme-dark {
+    --editor-bg-color: #504e4d;             	/* #504e4d var(--700)*/ 
+    --editor-note-shadow-color: #00000091;    	/* color for shadow around note */
+    --editor-note-border-color: #3636369c;   	/* color for border around note */
+    --editor-bg-offset: 4px 2px;   				 /* offset for background image (Point Grid) */       
+    --editor-bg-size: 58;       				 /* tiling for background image (Point Grid) px applied automatically */
+    --000: #dddddd;
+    --100: var(--700);   						 /* file bar uses --100 */
+    --700: #282729;
+    --800: #0f0f0f;
+}
+
+/* Set file bar for Vicious theme to the same color as the editor outline*/
+body.view-header { background-color: var(--100) !important; }
+body.is-focused .view-header { background-color: var(--100) !important; }
+
+/* ============================== */
+/* Editor Background (Point Grid) */
+/* ============================== */
+
+.markdown-reading-view .markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-contentContainer {
+    background-color: var(--editor-bg-color); 
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA+CAYAAABzwahEAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEAAACxABrSO9dQAAAAd0SU1FB+oDAhYxAqZamUMAAABZSURBVGje7c8BAQAwCAMgb6D1b3eDDBrwkvwptFNKXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFy8xwFsJQIFJ2dugwAAAABJRU5ErkJggg==");
+    background-blend-mode: var(--editor-bg-blend);
+    border-radius: 12px;
+    border: 1px solid var(--editor-note-border-color);
+    box-shadow: 0 0 22px 3px var(--editor-note-shadow-color);
+    padding: 32px; 
+}
+
+.markdown-source-view.mod-cm6 .cm-scroller {
+	background-color: var(--editor-bg-color);
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA+CAYAAABzwahEAAAAAXNSR0IB2cksfwAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEAAACxABrSO9dQAAAAd0SU1FB+oDAhYYOsoevjYAAATWSURBVGje7Vpdc6pIFGxA6yoRJhhEjYpQFBp8yG/cf5mHvMfEqAhEjXx5XxbLSvgYs7qbvWGe+3C6Z0anz8xh7u/v9/iBg8UPHaXw4xFFEaIoOulDp8ZcGl8UwxYF0iY4JebSeBoc1263/zoG7/d7qKoKwzAQBAHW6zVYls1N0Gw2MR6PUa/XsVqtsN/vM2OiKEKtVsNoNEK73YbrugiCIBcPALquQ9M0+L6PzWZTyEmWZdzd3aFaraZySo2WZRmSJEGWZcRxnDtzcRxDkqQDnuO4QjzP85BlGc1mEzzPF+bgOO7ASZIkKk43NzcHToUrzrIs9vs9giBAFEV4enqC7/u5swsAQRCAYRjMZjN4nnf4VtbwfR8Mw8B1Xcxms1w8y7KIoghhGCIMQ0yn09wdcswJAKbTKTabzacFYdLO8SSIZdnCFUy2VrIK1Wr1JDxtjnNzqqQF0ZD/uBVpyHwVfwlO5TleCi+Fl8JL4X/SqOSdgX/COZ6FZ7O8t2ma4Hm+0Own3ts0TSiKQoXnOA6qqkLTNHAcRxWjKMpJnHieh2maaDabqfhKWkGgqSqIJKFSqeDh4SF3hoMggGEYUFUVnufBtu2DuCwf3Ww2oes6GIbB29sb5vN5Jj75lqZpEAQBAPD4+JjLKY5j9Ho99Pt9EEKwXC4/cUrd6rbjgKtW4TgOlUNyHAee58FxnMLVYFkWm80GrusCQGGllYi3bRsAqDgluOvr60Pcx/HJqyfEky1I+3s63rJFMcffpclxCU5s2grSEjqOoRV9jKfNcQlOlbxEpxYF3wlfFFMamFJ4KbwUXnr1r/riorOZFn9OTmyW906uimm9tyzLqNVq1A8EoihCFEVq/Lk5fXpQAIDRaARN08AwDJbL5cFqZiXp9/sYjUYQBAHz+RxRFGXigyAAIQSTyQStVguu66Ze/34UMZlMMBgMEMcxbNvOXfUoiqDrOkzTRL1ex2w2o3tQKPLO/xT/1cEwzPm+lebVa7UaeJ4/FB1Fs8txHAgh2Gw2eH9/p/LeoigCAFzXpcKfm1Pqg8K/8eeWXCzQ3pefm1OmV/+/PRCcii8NTCm8FF4K/znCf2Tzz8eLPdoEx/ditHjaHJfglOrVdV2HYRgIw7DQWQVBgFarBcuyUK/XYds2VfPPZDKBoihwHIeq+ccwDOi6Dt/34XleIad2uw3LsvDr1y/65h9JktBoNCBJEtXsEkIgCAIkSaJu/hFFEYQQ6uYfSZIgCAIIIVScijSkNv/sdjv4vk/daLPb7RDHMV5eXrBerwvF+76POI6xWq3w+vqaW+gkzT++72O322E6nSIMw0JO2+0WcRzj+fkZ2+32sl6d1op+h0fD/8Srl80/pYEphZfCS+Gl8POOyjnPzO94jmdxSi1SFEWBZVloNBrUjTbj8RidTqewikqKB8MwYBgG9QNBp9OBZVnUzT+NRgOWZWU2JLFpBYGqquj3++j1eoU+OggCdLtd9Pt9DIdDKq9OCMFgMMBgMAAhJDdHMlHD4RC3t7fodrtUjfpJ84+qqqkVWupWn8/nAIDFYkHlqGzbBiHk0PGU+6fyd/NP8kJD2/yTvNDYtk31gLFYLHB1dXXQ8nFkevVj60dbL9PGXBpPo4Et8ru0vviUmEvjaXBl809pYH7I+A0Ae6zVZ83gZQAAAABJRU5ErkJggg==");
+    background-position: var(--editor-bg-offset);
+    background-repeat: repeat;
+	background-size: calc(var(--editor-bg-size) * 1px);
+	background-blend-mode: var(--editor-bg-blend);
+	background-attachment: fixed;
+	opacity: 1;
+}

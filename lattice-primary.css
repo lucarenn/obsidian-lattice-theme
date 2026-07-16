@@ -1,0 +1,1308 @@
+/*
+                                            _.._               
+.---.                                   .-'_..._''.                     
+|   |                           .--.  .' .'      '.\     __.....__        
+|   |                           |__| / .'            .-''         '.      
+|   |              .|       .|  .--.. '             /     .-''"'-.  `.  
+|   |    __      .' |_    .' |_ |  || |      |     /     /________\   \ 
+|   | .:--.'.  .'     | .'     ||  || |    -=x=-   |                  | 
+|   |/ |   \ |'--.  .-''--.  .-'|  |. '      |     \    .-------------' 
+|   |`" __ | |   |  |     |  |  |  | \ '.          .\    '-........---. 
+|   | .'.''| |   |  |     |  |  |__|  '. `.......-'/ `.             .'  
+'---'/ /   | |_  |  '.'   |  '.'        `-....... /    `''-...... -'    
+     \ \._,\ '/  |   /    |   /                                        
+      `--'  `"   `'-'     `'-'           -~oO PRIMARY THEME Oo~-
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Installation:
+1. Download this CSS file
+2. Create a snippets folder in your vault-folder/.obsidian directory
+3. Put the CSS file inside the vault-folder/.obsidian/snippets folder
+4. Go to Settings -> Appearance. Scroll down to "CSS snippets" and toggle this copied file to "on"
+5. Install the "Style Settings" community plugin to customize https://github.com/obsidian-community/obsidian-style-settings
+
+This preset was made to work in combination with the Primary Theme https://github.com/primary-theme/obsidian.
+
+Since this snippet overrides many settings of the theme, the original style settings of the theme might not work as expected.
+Use the style settings section of this file ("Lattice Primary") instead.
+
+----------------------------------------------------------------------------------------------------------------------------- */
+
+/* @settings
+
+name: Lattice Primary
+id: lattice-primary
+settings:
+	-
+		id: colorLightSettings
+		title: Light Theme Colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: color-l-gray-40
+		title: Side Panel Color
+		description: Includes side panels, top bar - basically everything besides the editor. Changes variable --color-l-gray-40.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#e2deda'
+	-
+		id: color-l-gray-60
+		title: Outlines Color
+		description: Changes variable --color-l-gray-60.
+		type: variable-color
+		format: hex
+		opacity: true
+		default: '#cecac2ff'
+	-
+		id: color-l-gray-110
+		title: Folder Text Color
+		description: Color for folder-, filenames and also settings sections. Changes variable --color-l-gray-110.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#886d54'
+	-
+		id: color-l-gray-80
+		title: Icons Color
+		description: Colors the icons in the top bar and the text of inactive file tabs. Changes variable --color-l-gray-80.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#4d382d'
+	-
+		id: color-l-gray-70
+		title: Ribbon Icons Color
+		description: Colors the icons of the left side ribbon and also headers of the settings. Changes variable --color-l-gray-70.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#a79594'
+	-
+		id: color-l-gray-30
+		title: Embeddings Color
+		description: Color for Codeblock background, Canvas cards, Kanban List Background and Vault button. Changes variable --color-l-gray-30.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#d3cdc7'
+	-
+		id: color-l-gray-130
+		title: Code Text Color
+		description: Default text color inside code blocks. Changes variable --color-l-gray-130.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#72604f'
+	-
+		id: color-l-gray-10
+		title: Kanban Card Color
+		description: Also changes Cavas icons color. Changes variable --color-l-gray-10.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#ece4e4'
+	-
+		id: color-l-gray-90
+		title: Hover Tab Color
+		description: Color for hovering over an inactive tab or icon. Changes variable --color-l-gray-90.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#4d382d'
+	-
+		id: color-l-gray-120
+		title: Filename 1 Color
+		description: Color for the filename in the top bar above the active document. Changes variable --color-l-gray-120.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#886d54'
+	-
+		id: color-l-gray-140
+		title: Filename 2 Color
+		description: Color for the filename inside the active document. Changes variable --color-l-gray-140.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#695644'
+
+
+
+	-
+		id: colorDarkSettings
+		title: Dark Theme Colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: color-d-gray-120
+		title: Side Panel Color
+		description: Includes side panels, top bar - basically everything besides the editor. Changes variable --color-d-gray-120.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#1c1c1c'
+	-
+		id: color-d-gray-80
+		title: Outlines Color
+		description: Changes variable --color-d-gray-80.
+		type: variable-color
+		format: hex
+		opacity: true
+		default: '#3d3936ff'
+	-
+		id: color-d-gray-40
+		title: Folder Text Color
+		description: Color for folder-, filenames and also settings sections. Changes variable --color-d-gray-40.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#a19b8e'
+	-
+		id: color-d-gray-50
+		title: Icons Color
+		description: Colors the icons in the top bar and the text of inactive file tabs. Changes variable --color-d-gray-50.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#a19b8e'
+	-
+		id: color-d-gray-60
+		title: Ribbon Icons Color
+		description: Colors the icons of the left side ribbon and also headers of the settings. Changes variable --color-d-gray-60.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#a19b8e'
+	-
+		id: color-d-gray-110
+		title: Embeddings Color
+		description: Color for Codeblock background, Canvas cards, Kanban List Background and Vault button. Changes variable --color-d-gray-110.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#171717'
+	-
+		id: color-d-gray-10
+		title: Filename Color
+		description: Color for filename inside the active document. Changes variable --color-d-gray-10.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#d6d1c7'
+	-
+		id: color-d-gray-90
+		title: Kanban Card Color
+		description: Changes variable --color-d-gray-90.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#292523'
+	-
+		id: color-d-gray-100
+		title: Canvas Icons Color
+		description: Canvas tool icons and Kanban List outlines. Changes variable --color-d-gray-100.
+		type: variable-color
+		format: hex
+		opacity: true
+		default: '#2c2722e0'
+	-
+		id: color-d-gray-130
+		title: Table Header Color
+		description: Table header background color and single line Codeblocks. Changes variable --color-d-gray-130.
+		type: variable-color
+		format: hex
+		opacity: false
+		default: '#2a2928'
+
+
+
+	-
+		id: editorSettings
+		title: Editor and Grid Settings
+		type: heading
+		level: 2
+		collapsed: true
+	- 
+		id: lattice-note-bg-color
+		title: Note Background Color
+		description: Background color of the note/document.
+		type: variable-themed-color
+		format: hex
+		opacity: true
+		default-light: '#E2DEDAff'
+		default-dark: '#1C1C1Cff'
+	- 
+		id: lattice-editor-bg-color
+		title: Editor Background Color
+		description: Background color of the dot grid, including the file header bar.
+		type: variable-themed-color
+		format: hex
+		opacity: true
+		default-light: '#E2DEDAff'
+		default-dark: '#1C1C1Cff'
+	-
+		id: lattice-note-width
+		title: Document Width
+		description: Set the width of the document/note
+		type: variable-select
+		default: 832px
+		options:
+			- 720px
+			- 780px
+			- 820px
+			- 832px
+			- 880px
+			- 920px
+			- 980px
+			- 1020px
+			- 1080px
+	-
+		id: lattice-grid-dot-color
+		title: Grid Dot Color
+		type: variable-themed-color
+		format: hex
+		opacity: true
+		default-light: '#b4a998b4'
+		default-dark: '#4b433aa2'
+	-
+		id: lattice-grid-size
+		title: Grid Size
+		type: variable-text
+		description: Set the size of the dot grid in pixels.
+		default: 12px 12px
+	-
+		id: lattice-note-shadow-color
+		title: Document Shadow Color
+		type: variable-themed-color
+		format: hex
+		opacity: true
+		default-light: '#a2979069'
+		default-dark: '#0000009c'
+	-
+		id: lattice-note-border-color
+		title: Document Border Color
+		type: variable-themed-color
+		format: hex
+		opacity: true
+		default-light: '#d2d1d159'
+		default-dark: '#3636369c'
+
+
+
+	-
+		id: codeSettings
+		title: Code Highlighting
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: lattice-code-keyword
+		type: variable-themed-color
+		title: Keyword Color
+		format: hex
+		opacity: false
+		default-light: '#F86D7B'
+		default-dark: '#EE7C87'
+	-
+		id: lattice-code-keyword-shadow
+		type: variable-themed-color
+		title: Keyword Color
+		format: hex
+		opacity: true
+		default-light: '#55292eFF'
+		default-dark: '#55292eFF'
+	-
+		id: lattice-code-builtin
+		type: variable-themed-color
+		title: Builtin Color
+		format: hex
+		opacity: false
+		default-light: '#AD6370'
+		default-dark: '#AD6370'
+	-
+        id: lattice-code-string
+        type: variable-themed-color
+        title: String Color
+        format: hex
+        opacity: false
+        default-light: '#4FAB77'
+        default-dark: '#557FF5'
+	-
+        id: lattice-code-string-shadow
+        type: variable-themed-color
+        title: String Shadow Color
+        format: hex
+        opacity: true
+        default-light: '#81CCA7FF'
+        default-dark: '#81CCA7FF'
+	-
+        id: lattice-code-number
+        type: variable-themed-color
+        title: Number Color
+        format: hex
+        opacity: false
+        default-light: '#72CFC0'
+        default-dark: '#C47FDA'
+	-
+        id: lattice-code-number-shadow
+        type: variable-themed-color
+        title: Number Shadow Color
+        format: hex
+        opacity: true
+        default-light: '#3B7C7CFF'
+        default-dark: '#3B7C7CFF'
+	-
+        id: lattice-code-comment
+        type: variable-themed-color
+        title: Comment Color
+        format: hex
+        opacity: false
+        default-light: '#AFADA9'
+        default-dark: '#524D4D'
+	-
+        id: lattice-code-main
+        type: variable-themed-color
+        title: Main Code Accent Color
+		description: Color for Variable, Property, Class and Function
+        format: hex
+        opacity: false
+        default-light: '#7467BE'
+        default-dark: '#9B92CC'
+	-
+        id: lattice-code-operator
+        type: variable-themed-color
+        title: Operator Color
+        format: hex
+        opacity: false
+        default-light: '#A79594'
+        default-dark: '#725E5D'
+	-
+        id: lattice-code-tag
+        type: variable-themed-color
+        title: HTML Tag Color
+        format: hex
+        opacity: false
+        default-light: '#CD4242'
+        default-dark: '#6275CB'
+	-
+        id: lattice-code-tag-bracket
+        type: variable-themed-color
+        title: HTML Tag Brackets Color
+        format: hex
+        opacity: false
+        default-light: '#836B49'
+        default-dark: '#836B49'
+	-
+        id: lattice-code-var-2
+        type: variable-themed-color
+        title: CSS Variable Color
+        format: hex
+        opacity: false
+        default-light: '#24A6B4'
+        default-dark: '#51A9B3'
+	-
+        id: lattice-code-qualifier
+        type: variable-themed-color
+        title: CSS Qualifier Color
+        format: hex
+        opacity: false
+        default-light: '#34B34B'
+        default-dark: '#4ABF5F'
+	-
+        id: lattice-code-background
+        type: variable-themed-color
+        title: Codeblock Background Color
+        format: hex
+        opacity: false
+        default-light: '#D3CDC7'
+        default-dark: '#171717'
+
+
+
+	-
+		id: headlineSettings
+		title: Headlines
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: h1-color
+		type: variable-themed-color
+		title: H1
+		format: hex
+		opacity: false
+		default-light: '#e2707c'
+		default-dark: '#f18196'
+	-
+		id: h1-size
+		type: variable-number
+		description: Headline 1 size in em
+		title: H1 size
+		default: 1.9
+		format: em
+	-
+        id: h2-color
+        type: variable-themed-color
+        title: H2
+        format: hex
+        opacity: false
+        default-light: '#daa56a'
+        default-dark: '#ee937a'
+	-
+		id: h2-size
+		type: variable-number
+		description: Headline 2 size in em
+		title: H1 size
+		default: 1.6
+		format: em
+	-
+        id: h3-color
+        type: variable-themed-color
+        title: H3
+        format: hex
+        opacity: false
+        default-light: '#7ab8ad'
+        default-dark: '#ebcb8b'
+	-
+		id: h3-size
+		type: variable-number
+		description: Headline 3 size in em
+		title: H1 size
+		default: 1.5
+		format: em
+	-
+		id: h4-color
+		type: variable-themed-color
+		title: H4
+		format: hex
+		opacity: false
+		default-light: '#7296b1'
+		default-dark: '#bcf181'
+	-
+		id: h4-size
+		type: variable-number
+		description: Headline 4 size in em
+		title: H1 size
+		default: 1.4
+		format: em
+	-
+		id: h5-color
+		type: variable-themed-color
+		title: H5
+		format: hex
+		opacity: false
+		default-light: '#968eb3'
+		default-dark: '#8be3eb'
+	-
+		id: h5-size
+		type: variable-number
+		description: Headline 5 size in em
+		title: H1 size
+		default: 1.3
+		format: em
+	-
+		id: h6-color
+		type: variable-themed-color
+		title: H6
+		format: hex
+		opacity: false
+		default-light: '#a2a899'
+		default-dark: '#ab8beb'
+	-
+		id: h6-size
+		type: variable-number
+		description: Headline 6 size in em
+		title: H1 size
+		default: 1.2
+		format: em
+
+
+
+	-
+		id: checkboxSettings
+		title: Checkboxes
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: checklist-done-color
+		type: variable-themed-color
+		title: Checkbox (checked) Text Color
+		format: hex
+		opacity: false
+		default-light: '#ada297'
+		default-dark: '#7e694e'
+	-
+		id: checkbox-marker-color
+		type: variable-themed-color
+		title: Checkbox (checked) Marker Color
+		format: hex
+		opacity: false
+		default-light: '#e6e2d5'
+		default-dark: '#cfcbb9'
+	-
+		id: checkbox-color-hover
+		type: variable-themed-color
+		title: Checkbox (checked) Hover Color
+		format: hex
+		opacity: false
+		default-light: '#a2a899'
+		default-dark: '#316850'
+	-
+		id: checkbox-color
+		type: variable-themed-color
+		title: Checkbox (checked) Color
+		format: hex
+		opacity: false
+		default-light: '#9e9590'
+		default-dark: '#4e4530'
+	-
+		id: checklist-bg
+		type: variable-themed-color
+		title: Checkbox (unchecked) Color
+		format: hex
+		opacity: false
+		default-light: '#efedeb'
+		default-dark: '#171717'
+
+
+
+	-
+		id: folderSettings
+		title: Folders
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: lattice-folder-bg-color
+		type: variable-themed-color
+		title: Folders Background Color
+		format: hex
+		opacity: true
+		default-light: '#00000000'
+		default-dark: '#00000000'
+	-
+		id: lattice-folder-hover-color
+		type: variable-themed-color
+		title: Folder Hover Color
+		format: hex
+		opacity: false
+		default-light: '#d3cdc7'
+		default-dark: '#262626'
+	-
+		id: lattice-folder-icon-color
+		type: variable-themed-color
+		title: Folder Icon Color
+		format: hex
+		opacity: false
+		default-light: '#886d54'
+		default-dark: '#a19b8e'
+	-
+		id: lattice-folder-indent-color
+		type: variable-themed-color
+		title: Folder Indentation Guide Color
+		format: hex
+		opacity: true
+		default-light: '#68b389ff'
+		default-dark: '#3d3936ff'
+	-
+		id: lattice-selected-folder-text-color
+		type: variable-themed-color
+		title: Selected Folders Text Color
+		format: hex
+		opacity: false
+		default-light: '#886d54'
+		default-dark: '#c5b99e'
+	-
+		id: lattice-selected-folder-shadow-color
+		type: variable-themed-color
+		title: Selected Folders Text Shadow Color
+		format: hex
+		opacity: false
+		default-light: '#6b6565'
+		default-dark: '#c2c2c2'
+	-
+		id: lattice-selected-folder-color
+		type: variable-themed-color
+		title: Selected Folders Background Color
+		format: hex
+		opacity: false
+		default-light: '#d3cdc7'
+		default-dark: '#262626'	
+
+
+
+	-
+		id: activeTabSettings
+		title: Active Tab
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: lattice-active-tab-color
+		type: variable-themed-color
+		title: Active Tab Background Color
+		format: hex
+		opacity: false
+		default-light: '#edeae8'
+		default-dark: '#181818'
+
+
+
+	-
+		id: tableSettings
+		title: Tables
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: lattice-table-cell-color
+		type: variable-themed-color
+		title: Table Cell Background Color
+		format: hex
+		opacity: false
+		default-light: '#efedeb'
+		default-dark: '#191919'
+	-
+		id: lattice-table-border-color
+		type: variable-themed-color
+		title: Table Border Color
+		format: hex
+		opacity: false
+		default-light: '#cfccc7'
+		default-dark: '#2b2b2b'
+
+
+
+	-
+		id: noticeSettings
+		title: Error Notice and Tooltips
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: lattice-error-notice-color
+		type: variable-themed-color
+		title: Error Notice Background Color
+		format: hex
+		opacity: false
+		default-light: '#8b2d2d'
+		default-dark: '#5f1b1b'
+	-
+		id: lattice-error-notice-text-color
+		type: variable-themed-color
+		title: Error Notice Text Color
+		format: hex
+		opacity: false
+		default-light: '#ffffff'
+		default-dark: '#e2d3d3'
+	-
+		id: lattice-tooltip-color
+		type: variable-themed-color
+		title: Tooltip Background Color
+		format: hex
+		opacity: false
+		default-light: '#a79594'
+		default-dark: '#181818'
+	-
+		id: lattice-tooltip-text-color
+		type: variable-themed-color
+		title: Tooltip Text Color
+		format: hex
+		opacity: false
+		default-light: '#ffffff'
+		default-dark: '#c5b99e'
+
+
+
+	-
+		id: settingsSettings
+		title: Settings Window
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: lattice-window-box-shadow-color
+		type: variable-themed-color
+		title: Shadow color
+		format: hex
+		opacity: true
+		default-light: '#5542339c'
+		default-dark: '#0000009c'
+	-
+		id: lattice-settings-bg-blur
+		type: variable-number
+		title: Background Blur
+		default: 1
+		format: px
+
+
+
+	-
+		id: loadingSettings
+		title: Loading Screen
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: lattice-loading-bar-color
+		type: variable-themed-color
+		title: Color of loading bar
+		format: hex
+		opacity: false
+		default-light: '#d3cdc7'
+		default-dark: '#171717'
+	
+*/
+
+
+/* ------------------------- Shared Variables ------------------------- */
+
+
+body {
+	--h1-size: 1.9em;
+	--h2-size: 1.6em;
+	--h3-size: 1.5em;
+	--h4-size: 1.4em;
+	--h5-size: 1.3em;
+	--h6-size: 1.2em;
+}
+
+
+/* --------------------------- LIGHT THEME --------------------------- */
+
+
+body.theme-light {
+
+	/* Lattice Light Theme Colors */
+	--lattice-light-grey-1: #e2dada; 			/* color-mix(in hsl, color-mix(in hsl, hsl(30, 12%, 87%) 80%, #f8f5f1 20%) 70%, hsl(40, 7%, 83%) 30%); */
+	--lattice-light-grey-2: #cfccc7;
+	--lattice-light-grey-0: #efedeb;
+	--lattice-light-orange: #daa56a; 			/* c7a680 */
+	--lattice-light-purple: #968eb3;			/* 968eb3 */
+	--lattice-light-turquise: #7ab8ad; 		/* acd0ca */
+	--lattice-light-peach: #e2707c; 			/* d38c93, d67e87 */
+	--lattice-light-green: #a2a899; 			/* b0b4aa */
+	--lattice-light-blue: #7296b1; 			/* 778fa1 */
+	--lattice-light-brown-1: #a79594;			/* a79594 */
+	--lattice-tab-text: #4d382d;
+	--lattice-folder-text: #886d54;
+
+	/* Primary Light Theme Color Settings */
+	--color-l-gray-10: #ece4e4;						   /* Kanban Card background */
+	--color-l-gray-40: var(--lattice-light-grey-1);			/* Side panel background (everything besides editor) */
+	--color-l-gray-30: #d3cdc7;						   /* Codeblock bg, Canvas cards bg, Kanban list bg, Vault button*/
+	--color-l-gray-60: #cecac2;						   /* Outlines */
+	--color-l-gray-70: var(--lattice-light-brown-1);		/* Sidebar icons, settings headers */
+	--color-l-gray-80: var(--lattice-tab-text);				/* Topbar icons */
+	--color-l-gray-90: var(--lattice-tab-text);				/* Hover tabs or Topbar icons */
+	--color-l-gray-110: var(--lattice-folder-text);			/* folders and files text, settings sections */
+	--color-l-gray-120: var(--lattice-folder-text);			/* Filename (on top of file) */
+	--color-l-gray-140: #695644;				  		   /* Filename (inside file) */
+	--color-l-gray-130: #72604f;				   		   /* Code Text */
+
+	/* Editor and Grid */
+	--lattice-note-bg-color: var(--lattice-light-grey-1);		/* Note bg */
+	--lattice-editor-bg-color: var(--lattice-light-grey-1);		/* Editor bg: dot grid, file header bar */
+	--lattice-note-width: 832px;
+	--lattice-grid-dot-color: #b4a998b4;
+	--lattice-grid-size: 12px 12px;
+	--lattice-note-shadow-color: #a2979069;
+	--lattice-note-border-color: #d2d1d159;
+
+	/* Code Highlighting */
+	--lattice-code-keyword: #F86D7B;
+	--lattice-code-keyword-shadow: #55292eFF;
+	--lattice-code-builtin: #AD6370;
+	--lattice-code-string: #4FAB77;
+	--lattice-code-string-shadow: #81CCA7FF;
+	--lattice-code-number: #72CFC0;
+	--lattice-code-number-shadow: #3B7C7CFF;
+	--lattice-code-comment: #AFADA9;
+	--lattice-code-main: #7467BE;
+	--lattice-code-operator: #A79594;
+	--lattice-code-tag: #CD4242;
+	--lattice-code-tag-bracket: #836B49;
+	--lattice-code-var-2: #24a6b4;
+	--lattice-code-qualifier: #34b34b;
+	--lattice-code-background: #d3cdc7;
+
+	/* Headlines */
+	--h1-color: var(--lattice-light-peach);
+	--h2-color: var(--lattice-light-orange);
+	--h3-color: var(--lattice-light-turquise);
+	--h4-color: var(--lattice-light-blue);
+	--h5-color: var(--lattice-light-purple);
+	--h6-color: var(--lattice-light-green);
+	
+	/* Checkbox List */
+	--checklist-done-decoration: none;
+	--checklist-done-color: #ada297;
+	--checkbox-marker-color: #e6e2d5;
+	--checkbox-color-hover: var(--lattice-light-green);
+	--checkbox-color: #9e9590;
+	--checklist-bg: var(--lattice-light-grey-0);
+
+	/* Folders */
+	--lattice-folder-bg-color: #00000000; 
+	--lattice-folder-hover-color: var(--color-l-gray-30);
+	--lattice-folder-icon-color: var(--lattice-folder-text);
+	--lattice-folder-indent-color: #68b389; 
+	--lattice-selected-folder-text-color: var(--lattice-folder-text);
+	--lattice-selected-folder-shadow-color: #6b6565;
+	--lattice-selected-folder-color: var(--color-l-gray-30);
+
+	/* Active Tab */
+	--lattice-active-tab-color: #edeae8;
+	--lattice-active-tab-border: none;
+
+	/* Table */
+	--lattice-table-cell-color: var(--lattice-light-grey-0);
+	--lattice-table-border-color: var(--lattice-light-grey-2);
+
+	/* Error Notice and Tooltip*/
+	--lattice-error-notice-color: #8b2d2d;
+	--lattice-error-notice-text-color: #ffffff;
+	--lattice-tooltip-text-color: var(--lattice-error-notice-text-color);
+	--lattice-tooltip-color: var(--lattice-light-brown-1);
+	--lattice-tooltip-border: none;
+
+	/* Settings Window */
+	--lattice-window-box-shadow-color: #5542339c;
+	--modal-background: var(--lattice-light-grey-1) !important;
+	--background-primary: var(--lattice-light-grey-1) !important;
+	--lattice-settings-bg-blur: 1px;
+
+	/* Loading Screen */
+	--lattice-loading-bar-color: #d3cdc7 ;
+
+	/* Remove alternating colors (No StyleSettings) */
+	--alternating-color-1: var(--lattice-tab-text);
+	--alternating-color-2: var(--lattice-tab-text);
+	--alternating-color-3: var(--lattice-tab-text);
+	
+	/* Text and Links: (No StyleSettings) */
+	--gutter-color: #977a6d !important;
+	--text-color: var(--lattice-light-brown-1) !important;
+	--link-color: var(--lattice-light-orange) !important;
+	--bold-color: var(--lattice-light-peach) !important;
+	--italic-color: var(--lattice-light-orange) !important;
+	--strikethrough-color: var(--lattice-light-green) !important;
+	--underline-color: var(--lattice-light-brown-1) !important;
+	--tag-color: var(--lattice-light-turquise) !important;
+	--link-color: var(--lattice-light-orange) !important;
+	--link-color-hover: #e0bb60 !important;
+	--link-external-color: var(--lattice-light-blue) !important;
+	--link-external-color-hover: #8ba5b9 !important;
+	--link-unresolved-color: #7e694e !important;
+	--link-unresolved-color-hover: #ab916d !important;
+
+}
+
+
+/* --------------------------- DARK THEME --------------------------- */
+
+
+body.theme-dark{
+
+	/* Lattice Dark Theme Colors */
+	--lattice-dark-highlight: #c5b99e;
+	--lattice-dark-grey: #1c1c1c;
+	--lattice-dark-text-color: #a19b8e; /* b6b0a3 */
+
+	/* Primary Dark Theme Color Settings */
+	--color-d-gray-10: #d6d1c7;						/* File Title color */
+	--color-d-gray-40: var(--lattice-dark-text-color);	 /* Files/folders text color */
+	--color-d-gray-50: var(--lattice-dark-text-color);	 /* Top icons colors + tabs text */
+	--color-d-gray-60: var(--lattice-dark-text-color);	 /* Sidebar icon color, folder icon color */
+	--color-d-gray-80: #3d3936;						/* Outline color (Editor/Sidebar/general) */
+	--color-d-gray-90: #292523;				  		/* Kanban card background color. To change directly use: --kanban-item-bg */
+	--color-d-gray-100: #2c2722e0;						/* Kanban Outline and Canvas Icons */
+	--color-d-gray-120: var(--lattice-dark-grey);		 /* 26211c 191817 Main background color (everything besides editor: file view, side bars, top bar etc.) */
+	--color-d-gray-110: #171717; 		 				/* Codeblock bg color, Canvas embedded notes, Kanban list bg, vault button */
+	--color-d-gray-130: #2a2928;						/* Table Header and single line code blocks */
+
+	/* Editor and Grid */
+	--lattice-note-bg-color: var(--lattice-dark-grey);
+	--lattice-editor-bg-color: var(--lattice-dark-grey);
+	--lattice-note-width: 832px;
+	--lattice-grid-dot-color: #4b433aa2;
+	--lattice-grid-size: 12px 12px;
+    --lattice-note-shadow-color: #0000009c;
+    --lattice-note-border-color: #3636369c;
+
+	/* Code Highlighting */
+	--lattice-code-keyword: #EE7C87;
+	--lattice-code-keyword-shadow: #55292eFF;
+	--lattice-code-builtin: #AD6370;
+	--lattice-code-string: #557FF5;
+	--lattice-code-string-shadow: #81CCA7FF;
+	--lattice-code-number: #C47FDA;
+	--lattice-code-number-shadow: #3B7C7CFF;
+	--lattice-code-comment: #524D4D;
+	--lattice-code-main: #9B92CC;
+	--lattice-code-operator: #725E5D;
+	--lattice-code-tag: #6275CB;
+	--lattice-code-tag-bracket: #836B49;
+	--lattice-code-var-2: #51A9B3;
+	--lattice-code-qualifier: #4ABF5F;
+	--lattice-code-background: #171717;
+
+	/* Headlines */
+	--h1-color: #f18196;
+	--h2-color: #ee937a;
+	--h3-color: #ebcb8b;
+	--h4-color: #bcf181;
+	--h5-color: #8be3eb;
+	--h6-color: #ab8beb;
+
+	/* Checkbox List */
+	--checklist-done-decoration: none;
+	--checklist-done-color: #7e694e;
+	--checkbox-marker-color: #cfcbb9;
+	--checkbox-color-hover: #316850;
+	--checkbox-color: #4e4530;
+	--checklist-bg: var(--color-d-gray-110);
+
+	/* Folders */
+	--lattice-folder-bg-color: #00000000;
+	--lattice-folder-hover-color: #262626;
+	--lattice-folder-icon-color: var(--lattice-dark-text-color);
+	--lattice-folder-indent-color: var(--color-d-gray-80);
+	--lattice-selected-folder-text-color: var(--lattice-dark-highlight); 
+	--lattice-selected-folder-shadow-color: #c2c2c2;
+	--lattice-selected-folder-color: #262626;
+
+	/* Active Tab */
+	--lattice-active-tab-color: #181818;
+	--lattice-active-tab-border: 1px solid #050505; 
+
+	/* Table */
+	--lattice-table-cell-color: #191919;
+	--lattice-table-border-color: #2b2b2b;
+
+	/* Error Notice and Tooltip*/
+	--lattice-error-notice-color: #5f1b1b;
+	--lattice-error-notice-text-color: #e2d3d3;
+	--lattice-tooltip-text-color: var(--lattice-dark-highlight);
+	--lattice-tooltip-color: var(--lattice-active-tab-color);
+	--lattice-tooltip-border: var(--lattice-active-tab-border);
+
+	/* Settings Window */
+	--lattice-window-box-shadow-color: #0000009c;
+	--modal-background: rgba(28, 28, 28, 0.98) !important;
+    --background-primary: #212121;
+	--lattice-settings-bg-blur: 1px;
+
+	/* Loading Screen */
+	--lattice-loading-bar-color: var(--color-d-gray-110); 
+
+	/* Remove alternating colors: (No StyleSettings) */
+	--alternating-color-1: var(--lattice-dark-highlight);
+	--alternating-color-2: var(--lattice-dark-highlight);
+	--alternating-color-3: var(--lattice-dark-highlight);
+
+	/* Text and Links: (No StyleSettings) */
+	--bold-color: #F19A81 !important;
+	--italic-color: #F1C981 !important;
+	--strikethrough-color: #7e694e !important;
+	--underline-color: #d7c0a3 !important;
+	--tag-color: #968eb3 !important;
+	--link-color: #eece8d !important;
+	--link-color-hover: #e0bb60 !important;
+	--link-external-color: #968eb3 !important;
+	--link-external-color-hover: #afa4d6 !important;
+	--link-unresolved-color: #7e694e !important;
+	--link-unresolved-color-hover: #ab916d !important;
+
+}
+
+
+/* --------------------------- EDITOR --------------------------- */
+
+
+/* Note background (shadow and clean background to seperate note from dot grid) */
+.markdown-reading-view .markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-contentContainer {
+    background-color: var(--lattice-note-bg-color) !important; 
+    border-radius: 12px;
+    border: 1px solid var(--lattice-note-border-color);
+    box-shadow: 0 0 22px 3px var(--lattice-note-shadow-color);
+    padding: 32px; 
+}
+
+/* Editor background: dot grid */
+.workspace-split.mod-root .view-content {
+	background-size: var(--lattice-grid-size) !important;
+	background-image: radial-gradient(circle, var(--lattice-grid-dot-color) 1px, var(--lattice-editor-bg-color) 1px) !important;
+}
+
+/* Editor background: top bar with file name (below tabs). Set it to the same color as the dot grid background color */
+.view-header,
+.is-focused .view-header {
+    background-color: var(--lattice-editor-bg-color) !important;
+}
+
+/* Canvas background: Remove old grid */
+.canvas-background rect {
+    display: none !important;
+}
+
+/* Canvas background: Apply new dot grid */
+.canvas-background {
+    background-image: radial-gradient(circle, var(--lattice-grid-dot-color) 1px, var(--lattice-editor-bg-color) 1px) !important;
+    background-size: var(--lattice-grid-size) !important;
+    background-color: transparent !important;
+}
+
+/* Set document width*/
+.markdown-reading-view .markdown-preview-sizer,
+.markdown-source-view.mod-cm6 .cm-contentContainer {
+    width: var(--lattice-note-width) !important;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* --------------------------- FOLDERS --------------------------- */
+
+
+/* Selected folders background */
+.tree-item-self.is-selected {
+	color: var(--lattice-selected-folder-text-color) !important;
+	text-shadow: 0 0 1px var(--lattice-selected-folder-shadow-color);
+	background-color: var(--lattice-selected-folder-color) !important;
+}
+
+/* Selected folders indicator */
+.tree-item-self.is-selected .tree-item-icon svg {
+    color: var(--lattice-selected-folder-text-color) !important;
+    stroke: var(--lattice-selected-folder-text-color) !important;
+}
+
+body.colorful-folders_background .tree-item,
+.tree-item:nth-child(n):has(.mod-collapsible){
+	/* Folder Icon Colors */
+	--nav-folder-collapse-color: var(--lattice-folder-icon-color) !important;
+	
+	/* Set folder bg color when primary has it disabled */
+	background: var(--lattice-folder-bg-color) !important;
+
+	/* Override folder bg color if primary has enabled it */
+	/* Change folder bg color if primary has enabled it */
+	--nav-folder-1-bg-color: var(--lattice-folder-bg-color) !important;  	/* #f18196 !important; */
+	--nav-folder-2-bg-color: var(--lattice-folder-bg-color) !important; 	/* #f19a81 !important; */
+	--nav-folder-3-bg-color: var(--lattice-folder-bg-color) !important; 	/* #f1c981 !important; */
+	--nav-folder-4-bg-color: var(--lattice-folder-bg-color) !important; 	/* #e3eb8b !important; */
+	--nav-folder-5-bg-color: var(--lattice-folder-bg-color) !important; 	/* #bcf181 !important; */
+	--nav-folder-6-bg-color: var(--lattice-folder-bg-color) !important; 	/* #8df181 !important; */
+	--nav-folder-7-bg-color: var(--lattice-folder-bg-color) !important; 	/* #81f1a4 !important; */
+	--nav-folder-8-bg-color: var(--lattice-folder-bg-color) !important; 	/* #8be3eb !important; */
+	--nav-folder-9-bg-color: var(--lattice-folder-bg-color) !important; 	/* #97b3f0 !important; */
+	--nav-folder-10-bg-color:var(--lattice-folder-bg-color) !important;  	/* #ab8beb !important; */
+	--nav-folder-11-bg-color:var(--lattice-folder-bg-color) !important;  	/* #d780e2 !important; */
+	--nav-folder-12-bg-color:var(--lattice-folder-bg-color) !important;  	/* #e984cb !important; */
+
+	/* Folder text color */
+	--nav-folder-1-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-2-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-3-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-4-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-5-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-6-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-7-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-8-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-9-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-10-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-11-color: var(--lattice-folder-icon-color) !important;
+	--nav-folder-12-color: var(--lattice-folder-icon-color) !important;
+
+	--nav-folder-1-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-2-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-3-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-4-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-5-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-6-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-7-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-8-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-9-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-10-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-11-indent-color: var(--lattice-folder-indent-color) !important;
+	--nav-folder-12-indent-color: var(--lattice-folder-indent-color) !important;
+
+	/* Folder hover color */
+	--nav-folder-1-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-2-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-3-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-4-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-5-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-6-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-7-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-8-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-9-bg-color-hover:var(--lattice-folder-hover-color) !important;
+	--nav-folder-10-bg-color-hover: var(--lattice-folder-hover-color) !important;
+	--nav-folder-11-bg-color-hover: var(--lattice-folder-hover-color) !important;
+	--nav-folder-12-bg-color-hover: var(--lattice-folder-hover-color) !important;
+
+}
+
+
+/* --------------------------- CODE HIGHLIGHTING --------------------------- */
+
+
+/* Keywords */
+.token.keyword ,
+.cm-editor .cm-keyword,
+.cm-editor .cm-type {
+    color: var(--lattice-code-keyword);
+	text-shadow: 0 0 0.6px var(--lattice-code-keyword-shadow);;
+}
+
+/* Builtin (like python "range") */
+.token.builtin,
+.cm-editor .cm-builtin.cm-hmd-codeblock{
+	color: var(--lattice-code-builtin)
+}
+
+/* Strings */
+.token.string,
+.cm-editor .cm-string {
+    color: var(--lattice-code-string);
+	text-shadow: 0 0 0.4px var(--lattice-code-string-shadow);
+}
+
+/* Numbers */
+.token.number,
+.cm-editor .cm-number {
+    color: var(--lattice-code-number);
+	text-shadow: 0 0 0.4px var(--lattice-code-number-shadow);
+}
+
+/* Comments */
+.token.comment,
+.cm-editor .cm-comment {
+    color: var(--lattice-code-comment);
+}
+
+/* Var, Class, Function & Property */
+.cm-editor .cm-variable,
+.token.class-name,
+.cm-editor .cm-typeName,
+.token.function,
+.cm-editor .cm-def,
+.cm-editor .cm-property {
+    color: var(--lattice-code-main);
+}
+
+/* Operators */
+.token.operator, 
+.cm-editor .cm-operator {
+    color: var(--lattice-code-operator);
+}
+
+/* HTML tag */
+.cm-editor .cm-tag { 
+    color: var(--lattice-code-tag);
+}
+
+/* HTML tag brackets */
+.cm-editor .cm-bracket { 
+    color: var(--lattice-code-tag-bracket);
+}
+
+/* CSS variables */
+.cm-variable-2{ 
+    color: var(--lattice-code-var-2)
+}
+
+/* CSS Qualifier */
+.cm-hmd-codeblock.cm-qualifier{ 
+    color: var(--lattice-code-qualifier)
+}
+
+
+/* --------------------------- MISC --------------------------- */
+
+
+/* Change loading screen progress bar color */
+.progress-bar-subline {
+    background: var(--lattice-loading-bar-color) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+/* Hide the editor scroll bar */
+body .cm-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide the help icon in the bottom left of the left panel */
+svg.help {
+    display: none !important;
+}
+
+/* Round table corners */
+.markdown-rendered table {
+    width: 100%;
+    border-radius: var(--radius-l);
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px var(--table-border-color);
+}
+
+/* Table cells background color */
+.markdown-rendered td {
+    background-color: var(--lattice-table-cell-color) !important;
+	border-color: var(--lattice-table-border-color) !important;
+}
+
+/* Change reading mode icon back to default (book instead of glasses) */
+.menu-item svg.lucide-book-open,
+.status-bar-item svg.lucide-book-open,
+.view-action[aria-label] svg.lucide-book-open {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+	background-color: var(--color-d-gray-120) !important;
+}
+
+/* Set Background Color of active Tab in Settings*/
+.modal .vertical-tab-nav-item.is-active:nth-child(n):not(body.is-phone .vertical-tab-nav-item) {
+    color: var(--lattice-dark-text-color);
+	font-weight: bold !important;
+    background: var(--color-d-gray-120); /* rgb(22, 21, 21); */
+    box-shadow: var(--button-accent-shadow);
+}
+
+/* Override active file tab background and border color */
+.workspace-tab-header.is-active {
+    background-color: var(--lattice-active-tab-color) !important;
+	font-weight: bolder;
+    border: var(--lattice-active-tab-border) !important;
+    border-radius: 6px;
+	/* text color is set via --lattice-highlight or via primarys variables: --alternating-color-1 -3 */
+}
+
+/* Change the settings window box shadow */
+.modal {
+    box-shadow: 0 8px 20px var(--lattice-window-box-shadow-color) !important;
+}
+
+/* Change Notice (Error) color. Somehow its too dark on light mode to read */
+.notice {
+    background-color: var(--lattice-error-notice-color) !important;
+    color: var(--lattice-error-notice-text-color) !important;
+}
+
+/* Change tooltip color */
+.tooltip {
+    background-color: var(--lattice-tooltip-color) !important;
+    color: var(--lattice-tooltip-text-color) !important;
+	border: var(--lattice-tooltip-border) !important;
+}
+
+/* Settings window background blur */
+ .modal-container {
+    backdrop-filter: blur(var(--lattice-settings-bg-blur)) !important;
+}
