@@ -6,7 +6,7 @@ The lattice theme is a not actually a complete [Obsidian Theme](https://obsidian
 1. Download one of the CSS files and install the corresponding theme
 2. If not present, create a snippets folder in your vault-folder/.obsidian directory
 3. Put the CSS file inside the vault-folder/.obsidian/snippets folder
-4. Go to Settings $\to$ Appearance. Scroll down to "CSS snippets" and toggle the copied file to "on"
+4. Go to Settings $\to$ Appearance. Scroll down to "CSS snippets" and toggle the file to "on" (press the refresh button if it does not show up).
 5. Install the [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) community plugin to customize 
 
 ## Showcase (Lattice Primary)
