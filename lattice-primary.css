@@ -1059,11 +1059,11 @@ body.theme-dark{
     background-color: transparent !important;
 }
 
-/* Set document width*/
+/* Set document width */
 .markdown-reading-view .markdown-preview-sizer,
-.markdown-source-view.mod-cm6 .cm-contentContainer {
+.markdown-source-view.mod-cm6 .cm-sizer {
     width: var(--lattice-note-width) !important;
-    max-width: 100%;
+    max-width: none !important;
     margin: 0 auto;
 }
 
@@ -1215,12 +1215,12 @@ body.colorful-folders_background .tree-item,
 
 /* CSS variables */
 .cm-variable-2{ 
-    color: var(--lattice-code-var-2)
+    color: var(--lattice-code-var-2);
 }
 
 /* CSS Qualifier */
 .cm-hmd-codeblock.cm-qualifier{ 
-    color: var(--lattice-code-qualifier)
+    color: var(--lattice-code-qualifier);
 }
 
 
