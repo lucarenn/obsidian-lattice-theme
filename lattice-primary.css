@@ -756,7 +756,48 @@ settings:
 		opacity: false
 		default-light: '#d3cdc7'
 		default-dark: '#171717'
-	
+
+
+
+	-
+		id: graphSettings
+		title: Graph View
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: graph-node
+		type: variable-themed-color
+		title: Resolved Note Node Color
+		format: hsl
+		opacity: false
+		default-light: 'hsl(0, 7%, 62%)'
+		default-dark: 'hsl(42, 25%, 70%)'
+	-
+		id: graph-node-unresolved
+		type: variable-themed-color
+		title: Unresolved Note Node Color
+		format: hsl
+		opacity: false
+		default-light: 'hsl(0, 12%, 80%)'
+		default-dark: 'hsl(7, 7%, 22%)'
+	-
+		id: graph-node-tag
+		type: variable-themed-color
+		title: Tag Node Color
+		format: hsl
+		opacity: false
+		default-light: 'hsl(155, 30%, 55%)'
+		default-dark: 'hsl(145, 35%, 50%)'
+	-
+		id: graph-node-attachment
+		type: variable-themed-color
+		title: Resolved Note Node Color
+		format: hsl
+		opacity: false
+		default-light: 'hsl(253, 35%, 70%)'
+		default-dark: 'hsl(253, 28%, 50%)'
+
 */
 
 
@@ -901,6 +942,12 @@ body.theme-light {
 	--link-unresolved-color: #7e694e !important;
 	--link-unresolved-color-hover: #ab916d !important;
 
+	/* Graph View */
+	--graph-node: hsl(0, 7%, 62%); 
+	--graph-node-unresolved: hsl(0, 12%, 80%);
+	--graph-node-tag: hsl(155, 30%, 55%);
+	--graph-node-attachment: hsl(253, 35%, 70%);
+
 }
 
 
@@ -1018,6 +1065,12 @@ body.theme-dark{
 	--link-external-color-hover: #afa4d6 !important;
 	--link-unresolved-color: #7e694e !important;
 	--link-unresolved-color-hover: #ab916d !important;
+
+	/* Graph View */
+	--graph-node: hsl(42, 25%, 70%);
+	--graph-node-unresolved: hsl(7, 7%, 22%);
+	--graph-node-tag: hsl(145, 35%, 50%); /* hsl(10, 100%, 70%); */
+	--graph-node-attachment: hsl(253, 28%, 50%);
 
 }
 
