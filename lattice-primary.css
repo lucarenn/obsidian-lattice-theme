@@ -817,6 +817,10 @@ body {
 /* --------------------------- LIGHT THEME --------------------------- */
 
 
+body.theme-light .kanban-plugin__item-title-wrapper {
+	border: 1px, rgb(204, 190, 172), solid !important;
+}
+
 body.theme-light {
 
 	/* Lattice Light Theme Colors */
@@ -953,6 +957,11 @@ body.theme-light {
 
 /* --------------------------- DARK THEME --------------------------- */
 
+
+body.theme-dark .kanban-plugin__item-title-wrapper {
+	background: #2b2827;
+	border: 1px, rgba(0, 0, 0, 0.82), solid;
+}
 
 body.theme-dark{
 
