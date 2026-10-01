@@ -7,6 +7,8 @@ This project is not an actual [Obsidian Theme](https://obsidian.md/help/themes),
 2. Go to Settings → Appearance. Click on "CSS snippets" and select the folder icon. Place the CSS file in the snippet folder and enable it (click the refresh button if it does not appear)
 4. Install the [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) community plugin to customize 
 
+> Note that some of the theme's style settings will no longer work because the snippet overrides them. Use the snippet's settings instead.
+
 ## Showcase (Lattice Primary)
 ![img](assets/lp_01_dl.png)
 

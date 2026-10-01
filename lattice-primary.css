@@ -860,6 +860,9 @@ body {
 	--h4-size: 1.4em;
 	--h5-size: 1.3em;
 	--h6-size: 1.2em;
+
+	/* Apply note width also to its content (text, codeblocks etc.)*/
+	--file-line-width: var(--lattice-note-width) !important;
 }
 
 
