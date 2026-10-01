@@ -798,6 +798,55 @@ settings:
 		default-light: 'hsl(253, 35%, 70%)'
 		default-dark: 'hsl(253, 28%, 50%)'
 
+
+
+	-
+		id: canvasSettings
+		title: Canvas
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: canvas-arrow-color
+		type: variable-themed-color
+		title: Arrow Color
+		format: hex
+		opacity: false
+		default-light: '#6666ff'
+		default-dark: '#6666ff'
+	-
+		id: canvas-card-border-color
+		type: variable-themed-color
+		title: Card Border Color
+		format: hex
+		opacity: true
+		default-light: '#664a34d1'
+		default-dark: '#525252e6'
+	-
+		id: canvas-card-shadow-color
+		type: variable-themed-color
+		title: Card Shadow Color
+		format: hex
+		opacity: true
+		default-light: '#a0918573'
+		default-dark: '#131212ff'
+	-
+		id: canvas-group-bg-color
+		type: variable-themed-color
+		title: Group Background Color
+		format: hex
+		opacity: true
+		default-light: '#e2dadaff'
+		default-dark: '#323234ff'
+	-
+		id: canvas-group-label-color
+		type: variable-themed-color
+		title: Group Label Color
+		format: hex
+		opacity: false
+		default-light: '#886d54'
+		default-dark: '#d6d1c7'
+
 */
 
 
@@ -952,6 +1001,14 @@ body.theme-light {
 	--graph-node-tag: hsl(155, 30%, 55%);
 	--graph-node-attachment: hsl(253, 35%, 70%);
 
+	/* Canvas */
+	--canvas-arrow-color: #6666ff;
+	--canvas-card-border-color: #664a34d1;
+	--canvas-card-shadow-color: #a0918573;
+	--canvas-card-preview-color: var(--color-l-gray-30);
+	--canvas-group-bg-color: var(--lattice-light-grey-1); /* #c9c1c1 */
+	--canvas-group-label-color: var(--lattice-folder-text);
+	
 }
 
 
@@ -1081,6 +1138,14 @@ body.theme-dark{
 	--graph-node-tag: hsl(145, 35%, 50%); /* hsl(10, 100%, 70%); */
 	--graph-node-attachment: hsl(253, 28%, 50%);
 
+	/* Canvas */
+	--canvas-arrow-color: #6666ff;
+	--canvas-card-border-color: #525252e6;
+	--canvas-card-shadow-color: #131212;
+	--canvas-card-preview-color: var(--lattice-dark-grey);
+	--canvas-group-bg-color: #323234;
+	--canvas-group-label-color: var( --color-d-gray-10);
+
 }
 
 
@@ -1128,6 +1193,47 @@ body.theme-dark{
     max-width: none !important;
     margin: 0 auto;
 }
+
+
+/* ---------------------------- CANVAS ---------------------------- */
+
+
+/* Group label */
+.canvas-group-label {
+    color:var(--canvas-group-label-color) !important;
+    background-color: transparent !important;
+}
+
+/* Canvas cards */
+.canvas-node-container {
+    box-shadow: 4px 4px 4px var(--canvas-card-shadow-color);
+    border: 1px solid var(--canvas-card-border-color);
+
+	/* Group background */
+    background-color: var(--canvas-group-bg-color) !important;
+}
+
+/* Arrow visible line */
+.canvas-display-path {
+    stroke: var(--canvas-arrow-color) !important;
+}
+
+/* Arrowhead */
+.canvas-path-end {
+    fill: var(--canvas-arrow-color) !important;
+    stroke: var(--canvas-arrow-color) !important;
+}
+
+/* Keep the hover area of arrows invisible */
+.canvas-interaction-path {
+    stroke: transparent !important;
+    fill: none !important;
+}
+
+.canvas-node-placeholder {
+    background-color: var(--canvas-card-preview-color) !important;
+}
+
 
 /* --------------------------- FOLDERS --------------------------- */
 
