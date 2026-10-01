@@ -4,21 +4,18 @@ This project is not an actual [Obsidian Theme](https://obsidian.md/help/themes),
 
 ## Installation
 1. Download one of the CSS files and install the corresponding theme
-2. If not present, create a snippets folder in your `vault-folder/.obsidian` directory
-3. Put the CSS file inside the `vault-folder/.obsidian/snippets` folder
-4. Go to Settings $\to$ Appearance. Scroll down to "CSS snippets" and toggle the file to "on" (press the refresh button if it does not show up).
-5. Install the [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) community plugin to customize 
+2. Go to Settings → Appearance. Click on "CSS snippets" and select the folder icon. Place the CSS file in the snippet folder and enable it (click the refresh button if it does not appear)
+4. Install the [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) community plugin to customize 
 
 ## Showcase (Lattice Primary)
+![img](assets/lp_01_dl.png)
 
 <table>
-  <tr>
-    <td><img src="assets/lp_01_dark.png" width="400"></td>
-    <td><img src="assets/lp_01_light.png" width="400"></td>
   </tr>
     <tr>
     <td><img src="assets/lp_02_dark.png" width="400"></td>
     <td><img src="assets/lp_02_light.png" width="400"></td>
+  </tr>
   </tr>
     <tr>
     <td><img src="assets/lp_03_dark.png" width="400"></td>
