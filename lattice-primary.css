@@ -869,8 +869,17 @@ body {
 /* --------------------------- LIGHT THEME --------------------------- */
 
 
+/* Kanban Plugin*/
 body.theme-light .kanban-plugin__item-title-wrapper {
 	border: 1px, rgb(204, 190, 172), solid !important;
+}
+
+/*Full Calendar Plugin background color and title */
+body.theme-light .fc-media-screen {
+	background-color: var(--lattice-editor-bg-color);
+}
+body.theme-light .fc-toolbar-title {
+	color: var(--lattice-folder-text);
 }
 
 body.theme-light {
@@ -1018,9 +1027,18 @@ body.theme-light {
 /* --------------------------- DARK THEME --------------------------- */
 
 
+/* Kanban Plugin */
 body.theme-dark .kanban-plugin__item-title-wrapper {
 	background: #2b2827;
 	border: 1px, rgba(0, 0, 0, 0.82), solid;
+}
+
+/*Full Calendar Plugin background color and title */
+body.theme-dark .fc-media-screen {
+	background-color: #2b2827;
+}
+body.theme-dark .fc-toolbar-title {
+	color: var(--lattice-dark-highlight);
 }
 
 body.theme-dark{
